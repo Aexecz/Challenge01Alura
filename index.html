@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de texto</title>
+
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="imagenes/Logo.png" alt="Logo de alura">
+    </header>
+    
+    <main>
+    
+        <section>
+            <textarea class="texto-ingresado" cols="30" rows="10" placeholder="Ingrese el texto a encriptar aquí"></textarea>
+        
+        <div>
+            <h1 class="info">Atento! Solo letras minusculas, los acentos seran eliminados automáticamente. </h1>
+        </div>
+        
+        <div class="botones">
+            <button class="b-encriptar" onclick="bEncriptar()">Encriptar</button>
+            <button class="b-desencriptar" onclick="bDesencriptar()">Desencriptar</button>
+        </div>
+    
+        </section>
+        
+    
+        <section>
+            <textarea class="mensaje-final" cols="20" rows="10"></textarea>
+            
+            <div>
+                <button class="b-copiar" onclick="copiar()">Copiar</button>
+            </div>
+
+        </section>
+
+    
+    </main>
+
+    <script src="script.js"></script>
+
+    <footer class="pie">
+
+        <p class="texto-pie">© 2023 | Todos los derechos reservados por Anthony Perez | AluraLatam + Oracle. </p>
+
+
+    </footer>
+
+    
+</body>
+</html>
