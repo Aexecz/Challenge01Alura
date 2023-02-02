@@ -1,7 +1,6 @@
 var textoIngresado = document.querySelector(".texto-ingresado")
 var mensaje = document.querySelector(".mensaje-final")
-const copia = document.querySelector(".b-copiar");
-copia.style.display = "none"
+var textoCopia = document.querySelector(".b-copiar");
 
 //Funcion reutilizada de mis compañeros del discord para borrar acentos del resultado final 
 
@@ -14,7 +13,7 @@ function bEncriptar(){
     mensaje.value = textoEncriptado
     textoIngresado.value = "";
     mensaje.style.backgroundImage = "none"
-    copia.style.display = "block"
+    
 }
 
 
@@ -28,6 +27,7 @@ function encriptar(stringEncriptando){
         }
 
     }
+    textoCopia.style.display = "block"
     return stringEncriptando
 }
 
@@ -50,15 +50,17 @@ function desencriptar(stringDesencriptando){
         }
 
     }
+    textoCopia.style.display = "block"
     return stringDesencriptando
 }
 
-function copiar(){
-    mensaje.select();
-    navigator.clipboard.writeText(mensaje.value)
-    mensaje.value = "";
-    alert("Texto Copiado con exito!!")
-}
+function copiar () {
+    var copyText = document.querySelector(".mensaje-final");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value)
+    copyText.value = "";
+  }
 
 
 
